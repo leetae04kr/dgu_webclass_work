@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8주차 - 박스 모델</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        /* 박스 모델 예제 */
+        .box1 {
+            width: 300px;
+            height: 150px;
+            background-color: #ffd9d9;
+            border: 2px solid #f00;
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        .box2 {
+            width: 300px;
+            height: 150px;
+            background-color: #d9e5ff;
+            border: 2px dotted #00f;
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        /* 테두리 스타일 예제 */
+        .border-styles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .border-box {
+            width: 120px;
+            height: 100px;
+            background-color: #f9f9f9;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .solid { border: 2px solid #000; }
+        .dotted { border: 2px dotted #000; }
+        .dashed { border: 2px dashed #000; }
+        .double { border: 4px double #000; }
+        .groove { border: 5px groove #000; }
+        .ridge { border: 5px ridge #000; }
+        .inset { border: 5px inset #000; }
+        .outset { border: 5px outset #000; }
+        
+        /* 둥근 테두리 예제 */
+        .rounded {
+            width: 300px;
+            height: 150px;
+            background-color: #d9ffd9;
+            border: 2px solid #0a0;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>CSS 박스 모델</h1>
+        
+        <h2>박스 모델 개념</h2>
+        <p>웹 문서의 내용은 박스 형태로 정의되며, 이것을 '박스 모델'이라고 합니다.</p>
+        <p>박스 모델은 콘텐츠(content), 패딩(padding), 테두리(border), 마진(margin)으로 구성됩니다.</p>
+        
+        <h2>박스 모델 예제</h2>
+        <div class="box1">
+            <p>박스 모델의 기본 구성 요소</p>
+            <p>width, height: 콘텐츠 영역의 크기</p>
+            <p>padding: 콘텐츠와 테두리 사이의 여백</p>
+            <p>border: 박스의 테두리</p>
+            <p>margin: 박스 모델 사이의 여백</p>
+        </div>
+        
+        <div class="box2">
+            <p>박스 모델의 전체 너비 계산</p>
+            <p>전체 너비 = width + left padding + right padding + left border + right border + left margin + right margin</p>
+        </div>
+        
+        <h2>테두리 스타일</h2>
+        <div class="border-styles">
+            <div class="border-box solid">solid</div>
+            <div class="border-box dotted">dotted</div>
+            <div class="border-box dashed">dashed</div>
+            <div class="border-box double">double</div>
+            <div class="border-box groove">groove</div>
+            <div class="border-box ridge">ridge</div>
+            <div class="border-box inset">inset</div>
+            <div class="border-box outset">outset</div>
+        </div>
+        
+        <h2>둥근 테두리</h2>
+        <div class="rounded">
+            <p>border-radius 속성을 사용하면 테두리를 둥글게 만들 수 있습니다.</p>
+            <p>이 박스는 border-radius: 20px를 적용했습니다.</p>
+        </div>
+    </div>
+</body>
+</html>

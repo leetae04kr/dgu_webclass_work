@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9주차 - DOM 조작</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        .output {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            min-height: 30px;
+        }
+        
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        
+        .item {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>DOM 조작</h1>
+        
+        <h2>1. 요소 선택하기</h2>
+        <p>자바스크립트를 사용하여 HTML 요소를 선택하는 방법을 알아봅니다.</p>
+        
+        <p id="para1">이것은 ID가 있는 단락입니다.</p>
+        <p class="para-class">이것은 클래스가 있는 단락입니다.</p>
+        <p class="para-class">이것도 같은 클래스가 있는 단락입니다.</p>
+        
+        <button onclick="selectById()">ID로 선택</button>
+        <button onclick="selectByClass()">클래스로 선택</button>
+        <button onclick="selectByTag()">태그로 선택</button>
+        <button onclick="selectByQuery()">쿼리 선택자로 선택</button>
+        
+        <div id="output1" class="output"></div>
+        
+        <h2>2. 요소 내용 변경하기</h2>
+        <p>자바스크립트를 사용하여 HTML 요소의 내용을 변경하는 방법을 알아봅니다.</p>
+        
+        <div id="content1">이 내용을 변경해보세요.</div>
+        
+        <button onclick="changeInnerHTML()">innerHTML 변경</button>
+        <button onclick="changeTextContent()">textContent 변경</button>
+        <button onclick="changeAttribute()">속성 변경</button>
+        
+        <div id="output2" class="output"></div>
+        
+        <h2>3. 요소 스타일 변경하기</h2>
+        <p>자바스크립트를 사용하여 HTML 요소의 스타일을 변경하는 방법을 알아봅니다.</p>
+        
+        <div id="styleBox" style="width: 200px; height: 100px; background-color: #d9e5ff; border: 1px solid #00f; padding: 10px; margin: 10px 0;">
+            스타일을 변경할 요소
+        </div>
+        
+        <button onclick="changeStyle()">스타일 변경</button>
+        <button onclick="addClassToElement()">클래스 추가</button>
+        <button onclick="removeClassFromElement()">클래스 제거</button>
+        <button onclick="toggleClassOfElement()">클래스 토글</button>
+        
+        <div id="output3" class="output"></div>
+        
+        <h2>4. 요소 생성 및 추가하기</h2>
+        <p>자바스크립트를 사용하여 새로운 HTML 요소를 생성하고 추가하는 방법을 알아봅니다.</p>
+        
+        <div id="container4">
+            <ul id="itemList">
+                <li class="item">항목 1</li>
+                <li class="item">항목 2</li>
+            </ul>
+        </div>
+        
+        <input type="text" id="newItemText" placeholder="새 항목 내용" value="새 항목">
+        <button onclick="createElement()">요소 생성 및 추가</button>
+        <button onclick="appendElement()">요소 끝에 추가</button>
+        <button onclick="prependElement()">요소 앞에 추가</button>
+        <button onclick="insertBeforeElement()">특정 위치에 삽입</button>
+        
+        <div id="output4" class="output"></div>
+        
+        <h2>5. 요소 제거하기</h2>
+        <p>자바스크립트를 사용하여 HTML 요소를 제거하는 방법을 알아봅니다.</p>
+        
+        <div id="container5">
+            <p id="removeMe">이 단락을 제거해보세요.</p>
+            <p>이 단락은 그대로 유지됩니다.</p>
+        </div>
+        
+        <button onclick="removeElement()">요소 제거</button>
+        <button onclick="removeChild()">자식 요소 제거</button>
+        <button onclick="replaceElement()">요소 교체</button>
+        
+        <div id="output5" class="output"></div>
+        
+        <h2>6. 이벤트 처리하기</h2>
+        <p>자바스크립트를 사용하여 이벤트를 처리하는 방법을 알아봅니다.</p>
+        
+        <button id="eventButton1">클릭 이벤트</button>
+        <input type="text" id="inputField" placeholder="입력하세요">
+        <div id="hoverBox" style="width: 200px; height: 100px; background-color: #d9ffd9; border: 1px solid #0a0; padding: 10px; margin: 10px 0;">
+            마우스를 올려보세요
+        </div>
+        
+        <div id="output6" class="output"></div>
+    </div>
+
+    <script>
+        // 1. 요소 선택하기
+        function selectById() {
+            const element = document.getElementById("para1");
+            document.getElementById("output1").innerHTML = "ID로 선택한 요소의 내용: " + element.textContent;
+        }
+        
+        function selectByClass() {
+            const elements = document.getElementsByClassName("para-class");
+            let output = "클래스로 선택한 요소 수: " + elements.length + "<br>";
+            for (let i = 0; i < elements.length; i++) {
+                output += "요소 " + (i + 1) + ": " + elements[i].textContent + "<br>";
+            }
+            document.getElementById("output1").innerHTML = output;
+        }
+        
+        function selectByTag() {
+            const elements = document.getElementsByTagName("p");
+            let output = "태그로 선택한 요소 수: " + elements.length + "<br>";
+            for (let i = 0; i < elements.length; i++) {
+                output += "요소 " + (i + 1) + ": " + elements[i].textContent.substring(0, 20) + "...<br>";
+            }
+            document.getElementById("output1").innerHTML = output;
+        }
+        
+        function selectByQuery() {
+            const element = document.querySelector(".para-class");
+            const elements = document.querySelectorAll(".para-class");
+            let output = "querySelector로 선택한 첫 번째 요소: " + element.textContent + "<br>";
+            output += "querySelectorAll로 선택한 요소 수: " + elements.length;
+            document.getElementById("output1").innerHTML = output;
+        }
+        
+        // 2. 요소 내용 변경하기
+        function changeInnerHTML() {
+            document.getElementById("content1").innerHTML = "<strong>innerHTML</strong>로 변경된 내용입니다.";
+            document.getElementById("output2").textContent = "innerHTML을 사용하여 내용이 변경되었습니다.";
+        }
+        
+        function changeTextContent() {
+            document.getElementById("content1").textContent = "<strong>textContent</strong>로 변경된 내용입니다.";
+            document.getElementById("output2").textContent = "textContent를 사용하여 내용이 변경되었습니다.";
+        }
+        
+        function changeAttribute() {
+            const element = document.getElementById("content1");
+            element.setAttribute("title", "툴팁 내용");
+            element.setAttribute("data-custom", "사용자 정의 속성");
+            document.getElementById("output2").innerHTML = "속성이 추가되었습니다. content1 요소에 마우스를 올려보세요.";
+        }
+        
+        // 3. 요소 스타일 변경하기
+        function changeStyle() {
+            const element = document.getElementById("styleBox");
+            element.style.backgroundColor = "#ffd9d9";
+            element.style.color = "#f00";
+            element.style.border = "2px dashed #f00";
+            element.style.borderRadius = "10px";
+            element.style.boxShadow = "3px 3px 5px #888";
+            document.getElementById("output3").textContent = "스타일이 변경되었습니다.";
+        }
+        
+        function addClassToElement() {
+            document.getElementById("styleBox").classList.add("highlight");
+            document.getElementById("output3").textContent = "highlight 클래스가 추가되었습니다.";
+        }
+        
+        function removeClassFromElement() {
+            document.getElementById("styleBox").classList.remove("highlight");
+            document.getElementById("output3").textContent = "highlight 클래스가 제거되었습니다.";
+        }
+        
+        function toggleClassOfElement() {
+            document.getElementById("styleBox").classList.toggle("highlight");
+            const hasClass = document.getElementById("styleBox").classList.contains("highlight");
+            document.getElementById("output3").textContent = "highlight 클래스가 " + (hasClass ? "추가" : "제거") + "되었습니다.";
+        }
+        
+        // 4. 요소 생성 및 추가하기
+        function createElement() {
+            const newItem = document.createElement("li");
+            newItem.textContent = document.getElementById("newItemText").value;
+            newItem.className = "item";
+            document.getElementById("itemList").appendChild(newItem);
+            document.getElementById("output4").textContent = "새 항목이 생성되어 추가되었습니다.";
+        }
+        
+        function appendElement() {
+            const newItem = document.createElement("li");
+            newItem.textContent = document.getElementById("newItemText").value + " (끝에 추가)";
+            newItem.className = "item";
+            document.getElementById("itemList").appendChild(newItem);
+            document.getElementById("output4").textContent = "새 항목이 목록 끝에 추가되었습니다.";
+        }
+        
+        function prependElement() {
+            const newItem = document.createElement("li");
+            newItem.textContent = document.getElementById("newItemText").value + " (앞에 추가)";
+            newItem.className = "item";
+            const list = document.getElementById("itemList");
+            list.insertBefore(newItem, list.firstChild);
+            document.getElementById("output4").textContent = "새 항목이 목록 앞에 추가되었습니다.";
+        }
+        
+        function insertBeforeElement() {
+            const newItem = document.createElement("li");
+            newItem.textContent = document.getElementById("newItemText").value + " (중간에 삽입)";
+            newItem.className = "item";
+            const list = document.getElementById("itemList");
+            const secondItem = list.children[1]; // 두 번째 항목
+            if (secondItem) {
+                list.insertBefore(newItem, secondItem);
+                document.getElementById("output4").textContent = "새 항목이 두 번째 항목 앞에 삽입되었습니다.";
+            } else {
+                list.appendChild(newItem);
+                document.getElementById("output4").textContent = "두 번째 항목이 없어 목록 끝에 추가되었습니다.";
+            }
+        }
+        
+        // 5. 요소 제거하기
+        function removeElement() {
+            const element = document.getElementById("removeMe");
+            if (element) {
+                element.remove();
+                document.getElementById("output5").textContent = "요소가 제거되었습니다.";
+            } else {
+                document.getElementById("output5").textContent = "이미 제거된 요소입니다.";
+            }
+        }
+        
+        function removeChild() {
+            const container = document.getElementById("container5");
+            const element = document.getElementById("removeMe");
+            if (element && container.contains(element)) {
+                container.removeChild(element);
+                document.getElementById("output5").textContent = "자식 요소가 제거되었습니다.";
+            } else {
+                document.getElementById("output5").textContent = "이미 제거된 요소입니다.";
+            }
+        }
+        
+        function replaceElement() {
+            const element = document.getElementById("removeMe");
+            if (element) {
+                const newElement = document.createElement("p");
+                newElement.textContent = "이 단락은 교체된 단락입니다.";
+                newElement.style.backgroundColor = "#d9ffd9";
+                newElement.id = "replacedElement";
+                element.parentNode.replaceChild(newElement, element);
+                document.getElementById("output5").textContent = "요소가 교체되었습니다.";
+            } else {
+                document.getElementById("output5").textContent = "교체할 요소가 없습니다.";
+            }
+        }
+        
+        // 6. 이벤트 처리하기
+        document.addEventListener("DOMContentLoaded", function() {
+            // 클릭 이벤트
+            document.getElementById("eventButton1").addEventListener("click", function() {
+                document.getElementById("output6").textContent = "버튼이 클릭되었습니다!";
+            });
+            
+            // 입력 이벤트
+            document.getElementById("inputField").addEventListener("input", function(event) {
+                document.getElementById("output6").textContent = "입력 내용: " + event.target.value;
+            });
+            
+            // 마우스 오버 이벤트
+            document.getElementById("hoverBox").addEventListener("mouseover", function() {
+                this.style.backgroundColor = "#ffd9d9";
+                document.getElementById("output6").textContent = "마우스가 요소 위에 있습니다.";
+            });
+            
+            // 마우스 아웃 이벤트
+            document.getElementById("hoverBox").addEventListener("mouseout", function() {
+                this.style.backgroundColor = "#d9ffd9";
+                document.getElementById("output6").textContent = "마우스가 요소를 벗어났습니다.";
+            });
+        });
+    </script>
+</body>
+</html>

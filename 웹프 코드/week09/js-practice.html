@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9주차 - 자바스크립트 실습</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        .output {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            min-height: 30px;
+        }
+        
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .calculator {
+            width: 300px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .calculator-display {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            text-align: right;
+            font-size: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        .calculator-buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+        
+        .calculator-button {
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        
+        .calculator-button:hover {
+            background-color: #d0d0d0;
+        }
+        
+        .calculator-button.operator {
+            background-color: #f0ad4e;
+            color: white;
+        }
+        
+        .calculator-button.equals {
+            background-color: #5cb85c;
+            color: white;
+        }
+        
+        .calculator-button.clear {
+            background-color: #d9534f;
+            color: white;
+        }
+        
+        .todo-app {
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .todo-header {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .todo-input {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .todo-add-btn {
+            margin-left: 5px;
+        }
+        
+        .todo-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .todo-item {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            margin-bottom: 5px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .todo-item.completed {
+            text-decoration: line-through;
+            color: #888;
+            background-color: #f0f0f0;
+        }
+        
+        .todo-checkbox {
+            margin-right: 10px;
+        }
+        
+        .todo-text {
+            flex-grow: 1;
+        }
+        
+        .todo-delete-btn {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>자바스크립트 실습</h1>
+        
+        <h2>1. 간단한 계산기</h2>
+        <p>자바스크립트를 사용하여 간단한 계산기를 만들어 봅니다.</p>
+        
+        <div class="calculator">
+            <div class="calculator-display" id="calculatorDisplay">0</div>
+            <div class="calculator-buttons">
+                <div class="calculator-button clear" onclick="clearCalculator()">C</div>
+                <div class="calculator-button" onclick="appendToCalculator('(')">(</div>
+                <div class="calculator-button" onclick="appendToCalculator(')')">)</div>
+                <div class="calculator-button operator" onclick="appendToCalculator('/')">/</div>
+                
+                <div class="calculator-button" onclick="appendToCalculator('7')">7</div>
+                <div class="calculator-button" onclick="appendToCalculator('8')">8</div>
+                <div class="calculator-button" onclick="appendToCalculator('9')">9</div>
+                <div class="calculator-button operator" onclick="appendToCalculator('*')">*</div>
+                
+                <div class="calculator-button" onclick="appendToCalculator('4')">4</div>
+                <div class="calculator-button" onclick="appendToCalculator('5')">5</div>
+                <div class="calculator-button" onclick="appendToCalculator('6')">6</div>
+                <div class="calculator-button operator" onclick="appendToCalculator('-')">-</div>
+                
+                <div class="calculator-button" onclick="appendToCalculator('1')">1</div>
+                <div class="calculator-button" onclick="appendToCalculator('2')">2</div>
+                <div class="calculator-button" onclick="appendToCalculator('3')">3</div>
+                <div class="calculator-button operator" onclick="appendToCalculator('+')">+</div>
+                
+                <div class="calculator-button" onclick="appendToCalculator('0')">0</div>
+                <div class="calculator-button" onclick="appendToCalculator('.')">.</div>
+                <div class="calculator-button" onclick="backspaceCalculator()">←</div>
+                <div class="calculator-button equals" onclick="calculateResult()">=</div>
+            </div>
+        </div>
+        
+        <h2>2. 할 일 목록 관리</h2>
+        <p>자바스크립트를 사용하여 할 일 목록을 관리하는 애플리케이션을 만들어 봅니다.</p>
+        
+        <div class="todo-app">
+            <h3>할 일 목록</h3>
+            <div class="todo-header">
+                <input type="text" id="todoInput" class="todo-input" placeholder="할 일을 입력하세요">
+                <button onclick="addTodo()" class="todo-add-btn">추가</button>
+            </div>
+            <ul id="todoList" class="todo-list">
+                <!-- 할 일 항목이 여기에 추가됩니다 -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 1. 간단한 계산기
+        let calculatorValue = "0";
+        
+        function updateCalculatorDisplay() {
+            document.getElementById("calculatorDisplay").textContent = calculatorValue;
+        }
+        
+        function clearCalculator() {
+            calculatorValue = "0";
+            updateCalculatorDisplay();
+        }
+        
+        function appendToCalculator(value) {
+            if (calculatorValue === "0" && value !== ".") {
+                calculatorValue = value;
+            } else {
+                calculatorValue += value;
+            }
+            updateCalculatorDisplay();
+        }
+        
+        function backspaceCalculator() {
+            if (calculatorValue.length > 1) {
+                calculatorValue = calculatorValue.slice(0, -1);
+            } else {
+                calculatorValue = "0";
+            }
+            updateCalculatorDisplay();
+        }
+        
+        function calculateResult() {
+            try {
+                calculatorValue = eval(calculatorValue).toString();
+            } catch (error) {
+                calculatorValue = "오류";
+            }
+            updateCalculatorDisplay();
+        }
+        
+        // 2. 할 일 목록 관리
+        const todos = [];
+        
+        function addTodo() {
+            const todoInput = document.getElementById("todoInput");
+            const todoText = todoInput.value.trim();
+            
+            if (todoText !== "") {
+                const todo = {
+                    id: Date.now(),
+                    text: todoText,
+                    completed: false
+                };
+                
+                todos.push(todo);
+                todoInput.value = "";
+                renderTodos();
+            }
+        }
+        
+        function toggleTodo(id) {
+            const todo = todos.find(todo => todo.id === id);
+            if (todo) {
+                todo.completed = !todo.completed;
+                renderTodos();
+            }
+        }
+        
+        function deleteTodo(id) {
+            const index = todos.findIndex(todo => todo.id === id);
+            if (index !== -1) {
+                todos.splice(index, 1);
+                renderTodos();
+            }
+        }
+        
+        function renderTodos() {
+            const todoList = document.getElementById("todoList");
+            todoList.innerHTML = "";
+            
+            todos.forEach(todo => {
+                const todoItem = document.createElement("li");
+                todoItem.className = `todo-item ${todo.completed ? "completed" : ""}`;
+                
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.className = "todo-checkbox";
+                checkbox.checked = todo.completed;
+                checkbox.addEventListener("change", () => toggleTodo(todo.id));
+                
+                const todoText = document.createElement("span");
+                todoText.className = "todo-text";
+                todoText.textContent = todo.text;
+                
+                const deleteButton = document.createElement("button");
+                deleteButton.className = "todo-delete-btn";
+                deleteButton.textContent = "삭제";
+                deleteButton.addEventListener("click", () => deleteTodo(todo.id));
+                
+                todoItem.appendChild(checkbox);
+                todoItem.appendChild(todoText);
+                todoItem.appendChild(deleteButton);
+                
+                todoList.appendChild(todoItem);
+            });
+        }
+        
+        // 엔터 키로 할 일 추가
+        document.getElementById("todoInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                addTodo();
+            }
+        });
+        
+        // 초기 할 일 목록 렌더링
+        renderTodos();
+    </script>
+</body>
+</html>

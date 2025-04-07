@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5주차(2) - 회원 가입 양식</title>
+</head>
+<body>
+    <h1>회원 가입</h1>
+    <form action="register.php" method="post">
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <ul>
+                <li>
+                    <label for="user_id">아이디</label>
+                    <input type="text" id="user_id" name="user_id" autofocus placeholder="아이디를 입력하세요" required>
+                </li>
+                <li>
+                    <label for="user_pw">비밀번호</label>
+                    <input type="password" id="user_pw" name="user_pw" placeholder="비밀번호를 입력하세요" required>
+                </li>
+                <li>
+                    <label for="user_pw_check">비밀번호 확인</label>
+                    <input type="password" id="user_pw_check" name="user_pw_check" placeholder="비밀번호를 다시 입력하세요" required>
+                </li>
+            </ul>
+        </fieldset>
+        
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+                <li>
+                    <label for="user_name">이름</label>
+                    <input type="text" id="user_name" name="user_name">
+                </li>
+                <li>
+                    <label for="user_mail">메일 주소</label>
+                    <input type="email" id="user_mail" name="user_mail" placeholder="이메일을 입력하세요" required>
+                </li>
+                <li>
+                    <label for="user_tel">연락처</label>
+                    <input type="tel" id="user_tel" name="user_tel">
+                </li>
+                <li>
+                    <label for="user_birth">생년월일</label>
+                    <input type="date" id="user_birth" name="user_birth">
+                </li>
+            </ul>
+        </fieldset>
+        
+        <fieldset>
+            <legend>기타 정보</legend>
+            <p>가입 경로</p>
+            <label><input type="radio" name="path" value="blog" checked>블로그</label>
+            <label><input type="radio" name="path" value="search">검색</label>
+            <label><input type="radio" name="path" value="sns">SNS</label>
+            <label><input type="radio" name="path" value="etc">기타</label>
+            
+            <p>관심 분야</p>
+            <label><input type="checkbox" name="interest" value="html">HTML</label>
+            <label><input type="checkbox" name="interest" value="css">CSS</label>
+            <label><input type="checkbox" name="interest" value="javascript">JavaScript</label>
+            
+            <p>하고 싶은 말</p>
+            <textarea name="comment" cols="60" rows="5" placeholder="남기고 싶은 말을 적어주세요"></textarea>
+        </fieldset>
+        
+        <div>
+            <input type="submit" value="가입하기">
+            <input type="reset" value="취소하기">
+        </div>
+    </form>
+</body>
+</html>

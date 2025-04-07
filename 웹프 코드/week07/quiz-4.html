@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7주차 - 퀴즈 4</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            text-shadow: 1px 1px 2px #ccc;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .product-list li {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        .product-name {
+            color: #0066cc;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        
+        .product-price {
+            color: #e91e63;
+            font-weight: bold;
+        }
+        
+        .product-desc {
+            color: #666;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        
+        .order-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .order-button:hover {
+            background-color: #45a049;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>상품 목록</h1>
+        
+        <ul class="product-list">
+            <li>
+                <div class="product-name">스마트폰 케이스</div>
+                <div class="product-price">15,000원</div>
+                <p class="product-desc">고급 가죽 소재로 제작된 스마트폰 케이스입니다. 충격 흡수 기능이 뛰어나며 세련된 디자인을 자랑합니다.</p>
+                <button class="order-button">주문하기</button>
+            </li>
+            <li>
+                <div class="product-name">블루투스 이어폰</div>
+                <div class="product-price">89,000원</div>
+                <p class="product-desc">노이즈 캔슬링 기능이 탑재된 고품질 블루투스 이어폰입니다. 최대 8시간 연속 재생이 가능합니다.</p>
+                <button class="order-button">주문하기</button>
+            </li>
+            <li>
+                <div class="product-name">스마트 워치</div>
+                <div class="product-price">120,000원</div>
+                <p class="product-desc">건강 관리 기능과 알림 기능이 탑재된 스마트 워치입니다. 방수 기능이 있어 수영 시에도 사용 가능합니다.</p>
+                <button class="order-button">주문하기</button>
+            </li>
+        </ul>
+        
+        <h2>상품 비교</h2>
+        <table>
+            <tr>
+                <th>상품명</th>
+                <th>가격</th>
+                <th>배송비</th>
+                <th>평점</th>
+            </tr>
+            <tr>
+                <td>스마트폰 케이스</td>
+                <td>15,000원</td>
+                <td>2,500원</td>
+                <td>4.5/5.0</td>
+            </tr>
+            <tr>
+                <td>블루투스 이어폰</td>
+                <td>89,000원</td>
+                <td>무료</td>
+                <td>4.8/5.0</td>
+            </tr>
+            <tr>
+                <td>스마트 워치</td>
+                <td>120,000원</td>
+                <td>무료</td>
+                <td>4.7/5.0</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4주차(2) - 이미지, 오디오, 비디오, 하이퍼링크</title>
+</head>
+<body>
+    <h1>멀티미디어 요소 활용하기</h1>
+    
+    <h2>이미지 삽입하기</h2>
+    <figure>
+        <img src="images/salad.jpg" alt="신선한 샐러드" width="400">
+        <figcaption>신선한 과일 샐러드</figcaption>
+    </figure>
+    
+    <h2>다양한 크기의 이미지</h2>
+    <img src="images/salad.jpg" alt="원본 크기 샐러드">
+    <img src="images/salad.jpg" alt="50% 크기 샐러드" width="50%">
+    <img src="images/salad.jpg" alt="150px 크기 샐러드" width="150">
+    
+    <h2>오디오 삽입하기</h2>
+    <audio src="medias/spring.mp3" controls></audio>
+    
+    <h2>비디오 삽입하기</h2>
+    <video src="medias/salad.mp4" controls width="700" poster="images/salad.jpg"></video>
+    
+    <h2>자동 재생 비디오 (음소거)</h2>
+    <video src="medias/salad.mp4" autoplay muted loop width="400"></video>
+    
+    <h2>PDF 파일 삽입하기</h2>
+    <object width="900" height="800" data="medias/sample.pdf"></object>
+    
+    <h2>하이퍼링크 삽입하기</h2>
+    <h3>텍스트 링크</h3>
+    <p><a href="poster.html" target="_blank">레드향 상품 소개 페이지로 이동</a></p>
+    
+    <h3>이미지 링크</h3>
+    <a href="poster.html">
+        <img src="images/salad.jpg" alt="샐러드" width="150">
+    </a>
+    
+    <h3>외부 사이트 링크</h3>
+    <p><a href="http://naver.com" target="_blank">네이버 바로가기</a></p>
+    
+    <h2>앵커 만들기</h2>
+    <ul>
+        <li><a href="#image">이미지 섹션으로 이동</a></li>
+        <li><a href="#audio">오디오 섹션으로 이동</a></li>
+        <li><a href="#video">비디오 섹션으로 이동</a></li>
+        <li><a href="#link">링크 섹션으로 이동</a></li>
+    </ul>
+    
+    <div id="image">
+        <h3>이미지 섹션</h3>
+        <p>이미지는 웹 페이지에서 시각적인 정보를 제공하는 중요한 요소입니다.</p>
+        <p>img 태그를 사용하여 이미지를 삽입할 수 있으며, alt 속성을 통해 대체 텍스트를 제공해야 합니다.</p>
+    </div>
+    
+    <div id="audio">
+        <h3>오디오 섹션</h3>
+        <p>오디오는 웹 페이지에서 소리를 제공하는 요소입니다.</p>
+        <p>audio 태그를 사용하여 오디오를 삽입할 수 있으며, controls 속성을 통해 재생 컨트롤을 표시할 수 있습니다.</p>
+    </div>
+    
+    <div id="video">
+        <h3>비디오 섹션</h3>
+        <p>비디오는 웹 페이지에서 동영상을 제공하는 요소입니다.</p>
+        <p>video 태그를 사용하여 비디오를 삽입할 수 있으며, poster 속성을 통해 썸네일 이미지를 설정할 수 있습니다.</p>
+    </div>
+    
+    <div id="link">
+        <h3>링크 섹션</h3>
+        <p>하이퍼링크는 웹 페이지 간의 이동을 가능하게 하는 요소입니다.</p>
+        <p>a 태그를 사용하여 링크를 생성할 수 있으며, href 속성에 이동할 페이지의 URL을 지정합니다.</p>
+    </div>
+</body>
+</html>

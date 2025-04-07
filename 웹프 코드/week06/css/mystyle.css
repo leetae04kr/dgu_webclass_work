@@ -1,0 +1,22 @@
+/* mystyle.css */
+h1 {
+    color: blue;
+    text-align: center;
+}
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+.accent {
+    color: red;
+    font-weight: bold;
+}
+.bg {
+    background-color: #eee;
+    padding: 10px;
+}
+#intro {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+}

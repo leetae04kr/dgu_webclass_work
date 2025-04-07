@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7주차 - 표 스타일</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        /* 기본 표 스타일 */
+        .basic-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        .basic-table th, .basic-table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        .basic-table th {
+            background-color: #f2f2f2;
+        }
+        
+        /* 표 테두리 스타일 */
+        .border-table {
+            border: 2px solid #000;
+            border-collapse: separate;
+            border-spacing: 5px;
+            width: 100%;
+        }
+        
+        .border-table th, .border-table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+        
+        .border-table th {
+            background-color: #f2f2f2;
+        }
+        
+        /* 셀 여백 스타일 */
+        .padding-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        .padding-table th {
+            padding: 15px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+        }
+        
+        .padding-table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        
+        /* 배경색 스타일 */
+        .color-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        .color-table th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .color-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .color-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .color-table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>표 스타일 지정하기</h1>
+        
+        <h2>기본 표 스타일</h2>
+        <p>border-collapse 속성을 사용하여 표 테두리를 합칠 수 있습니다.</p>
+        
+        <table class="basic-table">
+            <caption>기본 표 스타일</caption>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>지역</th>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>25</td>
+                <td>서울</td>
+            </tr>
+            <tr>
+                <td>김철수</td>
+                <td>30</td>
+                <td>부산</td>
+            </tr>
+            <tr>
+                <td>이영희</td>
+                <td>28</td>
+                <td>인천</td>
+            </tr>
+        </table>
+        
+        <h2>표 테두리 스타일</h2>
+        <p>border-collapse와 border-spacing 속성을 사용하여 표 테두리 스타일을 지정할 수 있습니다.</p>
+        
+        <table class="border-table">
+            <caption>표 테두리 스타일</caption>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>지역</th>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>25</td>
+                <td>서울</td>
+            </tr>
+            <tr>
+                <td>김철수</td>
+                <td>30</td>
+                <td>부산</td>
+            </tr>
+            <tr>
+                <td>이영희</td>
+                <td>28</td>
+                <td>인천</td>
+            </tr>
+        </table>
+        
+        <h2>셀 여백 스타일</h2>
+        <p>padding 속성을 사용하여 셀 내부 여백을 지정할 수 있습니다.</p>
+        
+        <table class="padding-table">
+            <caption>셀 여백 스타일</caption>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>지역</th>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>25</td>
+                <td>서울</td>
+            </tr>
+            <tr>
+                <td>김철수</td>
+                <td>30</td>
+                <td>부산</td>
+            </tr>
+            <tr>
+                <td>이영희</td>
+                <td>28</td>
+                <td>인천</td>
+            </tr>
+        </table>
+        
+        <h2>배경색 스타일</h2>
+        <p>background-color 속성을 사용하여 표의 배경색을 지정할 수 있습니다.</p>
+        
+        <table class="color-table">
+            <caption>배경색 스타일</caption>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>지역</th>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>25</td>
+                <td>서울</td>
+            </tr>
+            <tr>
+                <td>김철수</td>
+                <td>30</td>
+                <td>부산</td>
+            </tr>
+            <tr>
+                <td>이영희</td>
+                <td>28</td>
+                <td>인천</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

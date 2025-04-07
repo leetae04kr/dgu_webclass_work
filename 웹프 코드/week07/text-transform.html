@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7주차 - 텍스트 변환</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        .none { text-transform: none; }
+        .capitalize { text-transform: capitalize; }
+        .uppercase { text-transform: uppercase; }
+        .lowercase { text-transform: lowercase; }
+        
+        .example {
+            background-color: #f5f5f5;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>텍스트 대소문자 변환하기</h1>
+        
+        <h2>text-transform 속성</h2>
+        <p>영문 텍스트의 대문자나 소문자를 바꾸는 속성입니다.</p>
+        
+        <h3>text-transform 속성값</h3>
+        <div class="example">
+            <p class="none">text-transform: none - Hello World (변환 없음)</p>
+            <p class="capitalize">text-transform: capitalize - hello world (단어의 첫 글자를 대문자로)</p>
+            <p class="uppercase">text-transform: uppercase - hello world (모든 글자를 대문자로)</p>
+            <p class="lowercase">text-transform: lowercase - HELLO WORLD (모든 글자를 소문자로)</p>
+        </div>
+        
+        <h3>활용 예시</h3>
+        <p>웹 사이트의 메뉴나 버튼 텍스트에 주로 사용됩니다.</p>
+        <p>영문 텍스트에만 적용되며, 한글에는 영향을 주지 않습니다.</p>
+    </div>
+</body>
+</html>

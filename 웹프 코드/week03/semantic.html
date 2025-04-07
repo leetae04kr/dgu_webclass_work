@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3주차 HTML 기본 문서</title>
+</head>
+<body>
+    <header>
+        <h1>HTML 기본 문서 만들기</h1>
+        <nav>
+            <ul>
+                <li><a href="#html-intro">HTML과 첫 만남</a></li>
+                <li><a href="#html-structure">HTML 구조 파악하기</a></li>
+                <li><a href="#semantic-tags">시맨틱 태그</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="html-intro">
+            <h2>HTML과 첫 만남</h2>
+            <p>HTML은 웹에서 자유롭게 오갈 수 있는 웹 문서를 만드는 언어입니다.</p>
+            <p>텍스트뿐만 아니라 이미지, 영상 등을 표시할 수 있으며, 마크업에 사용하는 꼬리표를 '태그(tag)'라고 합니다.</p>
+        </section>
+        
+        <section id="html-structure">
+            <h2>HTML 구조 파악하기</h2>
+            <article>
+                <h3>HTML 문서의 기본 구조</h3>
+                <p>HTML 문서는 다음과 같은 기본 구조를 가집니다:</p>
+                <ul>
+                    <li>&lt;!DOCTYPE html&gt; - 웹 브라우저에게 HTML 문서임을 알려줍니다.</li>
+                    <li>&lt;html&gt; - 웹 문서의 시작과 끝을 나타냅니다.</li>
+                    <li>&lt;head&gt; - 문서 관련 정보를 입력합니다.</li>
+                    <li>&lt;body&gt; - 실제 브라우저에 표시될 내용을 입력합니다.</li>
+                </ul>
+            </article>
+        </section>
+        
+        <section id="semantic-tags">
+            <h2>웹 문서 구조를 만드는 시맨틱 태그</h2>
+            <p>시맨틱(semantic)은 '의미론적인', '의미가 통하는'이라는 뜻으로, 이름만 봐도 의미를 알 수 있는 HTML 태그를 말합니다.</p>
+            
+            <article>
+                <h3>주요 시맨틱 태그</h3>
+                <dl>
+                    <dt>&lt;header&gt;</dt>
+                    <dd>헤더 영역을 나타내는 태그로, 사이트 전체의 헤더나 특정 영역의 헤더에 사용합니다.</dd>
+                    
+                    <dt>&lt;nav&gt;</dt>
+                    <dd>내비게이션 영역을 나타내는 태그로, 웹 문서 안의 다른 위치나 다른 웹 문서로 연결하는 링크를 만듭니다.</dd>
+                    
+                    <dt>&lt;main&gt;</dt>
+                    <dd>웹 문서에서 핵심이 되는 내용을 담는 태그로, 웹 문서마다 다르게 보여주는 내용으로 구성됩니다.</dd>
+                    
+                    <dt>&lt;article&gt;</dt>
+                    <dd>독립적인 콘텐츠를 담는 태그로, 따로 떼어도 콘텐츠가 되는 내용을 담습니다.</dd>
+                    
+                    <dt>&lt;section&gt;</dt>
+                    <dd>콘텐츠 영역을 나타내는 태그로, 몇 개의 콘텐츠를 묶는 용도로 사용합니다.</dd>
+                    
+                    <dt>&lt;aside&gt;</dt>
+                    <dd>사이드 바 영역을 나타내는 태그로, 본문 내용 외에 왼쪽이나 오른쪽, 혹은 아래쪽에 사이드 바를 표시합니다.</dd>
+                    
+                    <dt>&lt;footer&gt;</dt>
+                    <dd>푸터 영역을 나타내는 태그로, 사이트 제작 정보나 저작권 정보, 연락처 등을 포함합니다.</dd>
+                    
+                    <dt>&lt;div&gt;</dt>
+                    <dd>여러 소스를 묶는 태그로, 영역을 구별하거나 스타일을 적용하기 위해 사용합니다.</dd>
+                </dl>
+            </article>
+        </section>
+    </main>
+    
+    <aside>
+        <h3>참고 자료</h3>
+        <p>HTML5 표준 문서: <a href="https://html.spec.whatwg.org/">https://html.spec.whatwg.org/</a></p>
+    </aside>
+    
+    <footer>
+        <p>&copy; 2025 HTML 학습 페이지</p>
+        <p>이 페이지는 3주차 학습 내용을 바탕으로 작성되었습니다.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7주차 - 텍스트 스타일</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+        
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+        }
+        
+        h1 {
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 3em;
+            color: #0000ff;
+            text-align: center;
+            text-shadow: 3px 3px 5px #666;
+        }
+        
+        .accent {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #f00;
+        }
+        
+        p {
+            font-size: 1em;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        #container {
+            width: 650px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>텍스트 스타일 적용하기</h1>
+        
+        <h2>글꼴 관련 스타일</h2>
+        <p><span class="accent">font-family</span> 속성은 웹 문서에서 사용할 글꼴을 지정합니다.</p>
+        <p><span class="accent">font-size</span> 속성은 글자 크기를 지정합니다.</p>
+        <p><span class="accent">font-style</span> 속성은 글자를 이탤릭체로 표시합니다.</p>
+        <p><span class="accent">font-weight</span> 속성은 글자 굵기를 조절합니다.</p>
+        
+        <h2>웹 폰트 사용하기</h2>
+        <p>웹 폰트는 웹 문서 안에 글꼴 정보도 함께 저장했다가 사용자가 웹 문서에 접속하면 글꼴을 사용자 시스템으로 다운로드시켜 사용하는 글꼴입니다.</p>
+        <p>이 페이지의 제목은 구글 웹 폰트 중 <span class="accent">'Nanum Pen Script'</span>를 사용하고 있습니다.</p>
+        
+        <h2>텍스트 관련 스타일</h2>
+        <p><span class="accent">color</span> 속성은 글자 색을 지정합니다.</p>
+        <p><span class="accent">text-align</span> 속성은 텍스트 정렬 방법을 지정합니다.</p>
+        <p><span class="accent">line-height</span> 속성은 줄 간격을 지정합니다.</p>
+        <p><span class="accent">text-decoration</span> 속성은 텍스트에 밑줄이나 취소선을 표시합니다.</p>
+        <p><span class="accent">text-shadow</span> 속성은 텍스트에 그림자 효과를 추가합니다.</p>
+    </div>
+</body>
+</html>

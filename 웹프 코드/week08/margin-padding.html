@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8주차 - 마진과 패딩</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        /* 마진 예제 */
+        .margin-box {
+            width: 200px;
+            height: 100px;
+            background-color: #ffd9d9;
+            border: 1px solid #f00;
+        }
+        
+        .margin1 { margin: 50px; }
+        .margin2 { margin: 30px 50px; }
+        .margin3 { margin: 30px 20px 50px; }
+        .margin4 { margin: 10px 20px 30px 40px; }
+        
+        /* 패딩 예제 */
+        .padding-box {
+            width: 200px;
+            height: 100px;
+            background-color: #d9e5ff;
+            border: 1px solid #00f;
+            margin-top: 20px;
+        }
+        
+        .padding1 { padding: 50px; }
+        .padding2 { padding: 30px 50px; }
+        .padding3 { padding: 30px 20px 50px; }
+        .padding4 { padding: 10px 20px 30px 40px; }
+        
+        /* 마진 중첩 예제 */
+        .overlap-container {
+            margin: 40px 0;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        
+        .box-a {
+            width: 100px;
+            height: 100px;
+            background-color: #ffd9d9;
+            margin: 30px;
+        }
+        
+        .box-b {
+            width: 100px;
+            height: 100px;
+            background-color: #d9e5ff;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>마진과 패딩</h1>
+        
+        <h2>마진(margin) 지정하기</h2>
+        <p>마진은 요소 주변의 여백을 의미하며, 다음과 같은 방법으로 지정할 수 있습니다.</p>
+        
+        <div class="margin-box margin1">margin: 50px (상하좌우 모두 50px)</div>
+        <div class="margin-box margin2">margin: 30px 50px (상하 30px, 좌우 50px)</div>
+        <div class="margin-box margin3">margin: 30px 20px 50px (상 30px, 좌우 20px, 하 50px)</div>
+        <div class="margin-box margin4">margin: 10px 20px 30px 40px (상 10px, 우 20px, 하 30px, 좌 40px)</div>
+        
+        <h2>패딩(padding) 지정하기</h2>
+        <p>패딩은 콘텐츠와 테두리 사이의 여백을 의미하며, 다음과 같은 방법으로 지정할 수 있습니다.</p>
+        
+        <div class="padding-box padding1">padding: 50px (상하좌우 모두 50px)</div>
+        <div class="padding-box padding2">padding: 30px 50px (상하 30px, 좌우 50px)</div>
+        <div class="padding-box padding3">padding: 30px 20px 50px (상 30px, 좌우 20px, 하 50px)</div>
+        <div class="padding-box padding4">padding: 10px 20px 30px 40px (상 10px, 우 20px, 하 30px, 좌 40px)</div>
+        
+        <h2>마진 중첩(Margin Collapse)</h2>
+        <p>요소를 세로로 배치할 때 마진이 겹치면 마진 값이 큰 쪽으로 합쳐지는 현상을 '마진 중첩'이라고 합니다.</p>
+        
+        <div class="overlap-container">
+            <div class="box-a"></div>
+            <div class="box-b"></div>
+            <p>위 두 박스의 마진은 각각 30px, 50px이지만, 마진 중첩으로 인해 두 박스 사이의 간격은 50px입니다.</p>
+        </div>
+    </div>
+</body>
+</html>

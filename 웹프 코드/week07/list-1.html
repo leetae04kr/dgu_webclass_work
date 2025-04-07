@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7주차 - 목록 스타일</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        /* 순서 없는 목록 스타일 */
+        .disc { list-style-type: disc; }
+        .circle { list-style-type: circle; }
+        .square { list-style-type: square; }
+        .none { list-style-type: none; }
+        
+        /* 순서 있는 목록 스타일 */
+        .decimal { list-style-type: decimal; }
+        .lower-alpha { list-style-type: lower-alpha; }
+        .upper-alpha { list-style-type: upper-alpha; }
+        .lower-roman { list-style-type: lower-roman; }
+        .upper-roman { list-style-type: upper-roman; }
+        
+        .example {
+            background-color: #f5f5f5;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>목록 스타일 지정하기</h1>
+        
+        <h2>list-style-type 속성</h2>
+        <p>순서 없는 목록의 불릿이나 순서 목록의 숫자를 바꾸는 속성입니다.</p>
+        
+        <h3>순서 없는 목록 스타일</h3>
+        <div class="example">
+            <ul class="disc">
+                <li>list-style-type: disc - 채운 원 모양 (기본값)</li>
+                <li>항목 2</li>
+                <li>항목 3</li>
+            </ul>
+            
+            <ul class="circle">
+                <li>list-style-type: circle - 빈 원 모양</li>
+                <li>항목 2</li>
+                <li>항목 3</li>
+            </ul>
+            
+            <ul class="square">
+                <li>list-style-type: square - 채운 사각형 모양</li>
+                <li>항목 2</li>
+                <li>항목 3</li>
+            </ul>
+            
+            <ul class="none">
+                <li>list-style-type: none - 불릿 없음</li>
+                <li>항목 2</li>
+                <li>항목 3</li>
+            </ul>
+        </div>
+        
+        <h3>순서 있는 목록 스타일</h3>
+        <div class="example">
+            <ol class="decimal">
+                <li>list-style-type: decimal - 1, 2, 3, ... (기본값)</li>
+                <li>항목 2</li>
+                <li>항목 3</li>
+            </ol>
+            
+            <ol class="lower-alpha">
+                <li>list-style-type: lower-alpha - a, b, c, ...</li>
+                <li>항목 2</li>
+                <li>항목 3</li>
+            </ol>
+            
+            <ol class="upper-alpha">
+                <li>list-style-type: upper-alpha - A, B, C, ...</li>
+                <li>항목 2</li>
+                <li>항목 3</li>
+            </ol>
+            
+            <ol class="lower-roman">
+                <li>list-style-type: lower-roman - i, ii, iii, ...</li>
+                <li>항목 2</li>
+                <li>항목 3</li>
+            </ol>
+            
+            <ol class="upper-roman">
+                <li>list-style-type: upper-roman - I, II, III, ...</li>
+                <li>항목 2</li>
+                <li>항목 3</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

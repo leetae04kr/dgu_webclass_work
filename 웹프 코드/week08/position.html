@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8주차 - 포지셔닝</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        /* 정적 위치 예제 */
+        .static-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        
+        .static-box {
+            position: static;
+            width: 100px;
+            height: 100px;
+            background-color: #ffd9d9;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        /* 상대 위치 예제 */
+        .relative-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px 0;
+            height: 200px;
+        }
+        
+        .relative-box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #d9e5ff;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        .relative-box1 { top: 0; left: 0; }
+        .relative-box2 { top: 20px; left: 30px; }
+        .relative-box3 { top: -20px; left: 100px; }
+        
+        /* 절대 위치 예제 */
+        .absolute-container {
+            position: relative;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px 0;
+            height: 300px;
+        }
+        
+        .absolute-box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #d9ffd9;
+            padding: 10px;
+        }
+        
+        .absolute-box1 { top: 10px; left: 10px; }
+        .absolute-box2 { top: 50px; right: 10px; }
+        .absolute-box3 { bottom: 10px; left: 50%; transform: translateX(-50%); }
+        
+        /* 고정 위치 예제 */
+        .fixed-box {
+            position: fixed;
+            width: 100px;
+            height: 50px;
+            background-color: #ffd9ff;
+            padding: 10px;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+        
+        /* z-index 예제 */
+        .z-index-container {
+            position: relative;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px 0;
+            height: 200px;
+        }
+        
+        .z-box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+        }
+        
+        .z-box1 { 
+            background-color: rgba(255, 0, 0, 0.5);
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+        
+        .z-box2 { 
+            background-color: rgba(0, 255, 0, 0.5);
+            top: 40px;
+            left: 40px;
+            z-index: 2;
+        }
+        
+        .z-box3 { 
+            background-color: rgba(0, 0, 255, 0.5);
+            top: 60px;
+            left: 60px;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>CSS 포지셔닝</h1>
+        
+        <h2>정적 위치(static)</h2>
+        <p>position: static은 기본값으로, 요소를 문서의 일반적인 흐름에 따라 배치합니다.</p>
+        
+        <div class="static-container">
+            <div class="static-box">정적 위치 요소</div>
+            <p>정적 위치 요소는 top, right, bottom, left 속성의 영향을 받지 않습니다.</p>
+        </div>
+        
+        <h2>상대 위치(relative)</h2>
+        <p>position: relative는 요소를 일반적인 위치에서 상대적으로 이동시킵니다.</p>
+        
+        <div class="relative-container">
+            <div class="relative-box relative-box1">상대 위치 1</div>
+            <div class="relative-box relative-box2">상대 위치 2 (top: 20px, left: 30px)</div>
+            <div class="relative-box relative-box3">상대 위치 3 (top: -20px, left: 100px)</div>
+        </div>
+        
+        <h2>절대 위치(absolute)</h2>
+        <p>position: absolute는 가장 가까운 위치 지정 조상 요소에 대해 상대적으로 배치됩니다.</p>
+        
+        <div class="absolute-container">
+            <div class="absolute-box absolute-box1">절대 위치 1 (top: 10px, left: 10px)</div>
+            <div class="absolute-box absolute-box2">절대 위치 2 (top: 50px, right: 10px)</div>
+            <div class="absolute-box absolute-box3">절대 위치 3 (bottom: 10px, left: 50%)</div>
+        </div>
+        
+        <h2>고정 위치(fixed)</h2>
+        <p>position: fixed는 뷰포트에 대해 상대적으로 배치되며, 스크롤해도 항상 같은 위치에 표시됩니다.</p>
+        
+        <div class="fixed-box">고정 위치 (bottom: 20px, right: 20px)</div>
+        
+        <h2>z-index</h2>
+        <p>z-index 속성은 요소의 쌓임 순서를 지정합니다. 값이 클수록 위에 표시됩니다.</p>
+        
+        <div class="z-index-container">
+            <div class="z-box z-box1">z-index: 1</div>
+            <div class="z-box z-box2">z-index: 2</div>
+            <div class="z-box z-box3">z-index: 3</div>
+        </div>
+    </div>
+</body>
+</html>

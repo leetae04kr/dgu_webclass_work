@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>여러 데이터 중 선택하기</h1>
+    <form>
+        <label>상품선택</label>
+        <select>
+            <option value="s_3" selected>선물용 3kg</option>
+            <option value="s_5">선물용 5kg</option>
+            <option value="f_3">가정용 3kg</option>
+            <option value="f_5">가정용 5kg</option>
+        </select>
+        <label>포장 여부</LabeL>
+        <input type="text" list="pack">
+        <datalist id="pack">
+            <option value="package">선물포장</option>
+            <option value="no_package">포장 안 함</option>
+        </datalist>
+    </form>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9주차 - 자바스크립트 기초</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        .output {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            min-height: 30px;
+        }
+        
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>자바스크립트 기초</h1>
+        
+        <h2>1. 자바스크립트 출력</h2>
+        <p>자바스크립트에서 출력하는 여러 가지 방법을 알아봅니다.</p>
+        
+        <button onclick="document.getElementById('output1').innerHTML = '안녕하세요! innerHTML을 사용한 출력입니다.'">innerHTML 사용</button>
+        <button onclick="document.write('document.write()를 사용한 출력입니다.')">document.write() 사용</button>
+        <button onclick="window.alert('alert()를 사용한 출력입니다.')">alert() 사용</button>
+        <button onclick="console.log('console.log()를 사용한 출력입니다.')">console.log() 사용</button>
+        
+        <div id="output1" class="output"></div>
+        
+        <h2>2. 변수와 데이터 타입</h2>
+        <p>자바스크립트의 변수 선언과 기본 데이터 타입을 알아봅니다.</p>
+        
+        <button onclick="showVariables()">변수와 데이터 타입 보기</button>
+        
+        <div id="output2" class="output"></div>
+        
+        <h2>3. 연산자</h2>
+        <p>자바스크립트의 기본 연산자를 알아봅니다.</p>
+        
+        <input type="number" id="num1" placeholder="첫 번째 숫자" value="10">
+        <input type="number" id="num2" placeholder="두 번째 숫자" value="5">
+        <button onclick="calculate()">계산하기</button>
+        
+        <div id="output3" class="output"></div>
+        
+        <h2>4. 조건문</h2>
+        <p>if-else 조건문을 사용하여 조건에 따라 다른 결과를 출력합니다.</p>
+        
+        <input type="number" id="score" placeholder="점수 입력 (0-100)" value="85">
+        <button onclick="checkGrade()">학점 확인</button>
+        
+        <div id="output4" class="output"></div>
+        
+        <h2>5. 반복문</h2>
+        <p>for 반복문과 while 반복문을 사용하여 반복 작업을 수행합니다.</p>
+        
+        <input type="number" id="loopCount" placeholder="반복 횟수" value="5">
+        <button onclick="runForLoop()">for 반복문 실행</button>
+        <button onclick="runWhileLoop()">while 반복문 실행</button>
+        
+        <div id="output5" class="output"></div>
+        
+        <h2>6. 함수</h2>
+        <p>자바스크립트 함수를 정의하고 호출하는 방법을 알아봅니다.</p>
+        
+        <input type="text" id="name" placeholder="이름 입력" value="홍길동">
+        <button onclick="greet()">인사하기</button>
+        <button onclick="calculateSum()">1부터 10까지 합계</button>
+        
+        <div id="output6" class="output"></div>
+        
+        <h2>7. 이벤트</h2>
+        <p>자바스크립트 이벤트를 사용하여 사용자 상호작용에 반응하는 방법을 알아봅니다.</p>
+        
+        <button id="eventButton">이벤트 버튼</button>
+        <button onclick="changeButtonText()">버튼 텍스트 변경</button>
+        <button onclick="addEventListenerToButton()">이벤트 리스너 추가</button>
+        
+        <div id="output7" class="output"></div>
+    </div>
+
+    <script>
+        // 2. 변수와 데이터 타입
+        function showVariables() {
+            // 변수 선언
+            let name = "홍길동";
+            let age = 25;
+            let isStudent = true;
+            let hobbies = ["독서", "여행", "음악"];
+            let person = {
+                firstName: "길동",
+                lastName: "홍",
+                fullName: function() {
+                    return this.lastName + this.firstName;
+                }
+            };
+            
+            // 출력
+            let output = "";
+            output += "문자열(String): " + name + "<br>";
+            output += "숫자(Number): " + age + "<br>";
+            output += "불리언(Boolean): " + isStudent + "<br>";
+            output += "배열(Array): " + hobbies + "<br>";
+            output += "객체(Object): " + person.fullName() + "<br>";
+            output += "undefined: " + undefined + "<br>";
+            output += "null: " + null + "<br>";
+            
+            document.getElementById("output2").innerHTML = output;
+        }
+        
+        // 3. 연산자
+        function calculate() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            
+            let output = "";
+            output += "덧셈(+): " + num1 + " + " + num2 + " = " + (num1 + num2) + "<br>";
+            output += "뺄셈(-): " + num1 + " - " + num2 + " = " + (num1 - num2) + "<br>";
+            output += "곱셈(*): " + num1 + " * " + num2 + " = " + (num1 * num2) + "<br>";
+            output += "나눗셈(/): " + num1 + " / " + num2 + " = " + (num1 / num2) + "<br>";
+            output += "나머지(%): " + num1 + " % " + num2 + " = " + (num1 % num2) + "<br>";
+            output += "증가(++): " + num1 + "++ = " + (num1 + 1) + "<br>";
+            output += "감소(--): " + num1 + "-- = " + (num1 - 1) + "<br>";
+            
+            document.getElementById("output3").innerHTML = output;
+        }
+        
+        // 4. 조건문
+        function checkGrade() {
+            let score = parseInt(document.getElementById("score").value);
+            let grade;
+            
+            if (score >= 90) {
+                grade = "A";
+            } else if (score >= 80) {
+                grade = "B";
+            } else if (score >= 70) {
+                grade = "C";
+            } else if (score >= 60) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+            
+            document.getElementById("output4").innerHTML = "점수: " + score + ", 학점: " + grade;
+        }
+        
+        // 5. 반복문
+        function runForLoop() {
+            let count = parseInt(document.getElementById("loopCount").value);
+            let output = "for 반복문 결과:<br>";
+            
+            for (let i = 1; i <= count; i++) {
+                output += i + "번째 반복<br>";
+            }
+            
+            document.getElementById("output5").innerHTML = output;
+        }
+        
+        function runWhileLoop() {
+            let count = parseInt(document.getElementById("loopCount").value);
+            let output = "while 반복문 결과:<br>";
+            let i = 1;
+            
+            while (i <= count) {
+                output += i + "번째 반복<br>";
+                i++;
+            }
+            
+            document.getElementById("output5").innerHTML = output;
+        }
+        
+        // 6. 함수
+        function greet() {
+            let name = document.getElementById("name").value;
+            let greeting = getGreeting(name);
+            document.getElementById("output6").innerHTML = greeting;
+        }
+        
+        function getGreeting(name) {
+            return "안녕하세요, " + name + "님!";
+        }
+        
+        function calculateSum() {
+            let sum = 0;
+            for (let i = 1; i <= 10; i++) {
+                sum += i;
+            }
+            document.getElementById("output6").innerHTML = "1부터 10까지의 합: " + sum;
+        }
+        
+        // 7. 이벤트
+        function changeButtonText() {
+            document.getElementById("eventButton").innerHTML = "텍스트 변경됨";
+        }
+        
+        function addEventListenerToButton() {
+            document.getElementById("eventButton").addEventListener("click", function() {
+                document.getElementById("output7").innerHTML = "이벤트 버튼이 클릭되었습니다!";
+            });
+            
+            document.getElementById("output7").innerHTML = "이벤트 리스너가 추가되었습니다. 이벤트 버튼을 클릭해보세요.";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7주차 - 텍스트 그림자</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        .shadow1 {
+            font-size: 2em;
+            text-shadow: 3px 3px 5px #666;
+        }
+        
+        .shadow2 {
+            font-size: 2em;
+            text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -19px 18px #f20;
+        }
+        
+        .shadow3 {
+            font-size: 2em;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+        
+        .shadow4 {
+            font-size: 2em;
+            color: #000;
+            text-shadow: 0 0 4px #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>텍스트에 그림자 효과 주기</h1>
+        
+        <h2>text-shadow 속성</h2>
+        <p>텍스트에 그림자 효과를 추가하는 속성입니다.</p>
+        
+        <h3>text-shadow 속성값</h3>
+        <p>text-shadow: 가로거리 세로거리 번짐정도 색상</p>
+        
+        <h3>그림자 효과 예제</h3>
+        <p class="shadow1">텍스트에 그림자 효과 주기</p>
+        <p class="shadow2">불꽃 효과 주기</p>
+        <p class="shadow3">어두운 배경에 밝은 텍스트</p>
+        <p class="shadow4">흐릿한 그림자 효과</p>
+    </div>
+</body>
+</html>

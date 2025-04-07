@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7주차 - 글자 간격</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        .letter-normal { letter-spacing: normal; }
+        .letter-2px { letter-spacing: 2px; }
+        .letter-5px { letter-spacing: 5px; }
+        .letter-10px { letter-spacing: 10px; }
+        
+        .word-normal { word-spacing: normal; }
+        .word-5px { word-spacing: 5px; }
+        .word-10px { word-spacing: 10px; }
+        .word-20px { word-spacing: 20px; }
+        
+        .example {
+            background-color: #f5f5f5;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>글자 간격과 단어 간격 조절하기</h1>
+        
+        <h2>letter-spacing 속성</h2>
+        <p>글자와 글자 사이의 간격을 조절하는 속성입니다.</p>
+        
+        <h3>letter-spacing 속성값 예제</h3>
+        <div class="example">
+            <p class="letter-normal">letter-spacing: normal - 기본 간격</p>
+            <p class="letter-2px">letter-spacing: 2px - 글자 간격 2px</p>
+            <p class="letter-5px">letter-spacing: 5px - 글자 간격 5px</p>
+            <p class="letter-10px">letter-spacing: 10px - 글자 간격 10px</p>
+        </div>
+        
+        <h2>word-spacing 속성</h2>
+        <p>단어와 단어 사이의 간격을 조절하는 속성입니다.</p>
+        
+        <h3>word-spacing 속성값 예제</h3>
+        <div class="example">
+            <p class="word-normal">word-spacing: normal - 기본 간격으로 단어 사이 간격 조절</p>
+            <p class="word-5px">word-spacing: 5px - 단어 사이 간격 5px 추가</p>
+            <p class="word-10px">word-spacing: 10px - 단어 사이 간격 10px 추가</p>
+            <p class="word-20px">word-spacing: 20px - 단어 사이 간격 20px 추가</p>
+        </div>
+    </div>
+</body>
+</html>

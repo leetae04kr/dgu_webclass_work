@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5주차(2) - 퀴즈 2</title>
+</head>
+<body>
+    <h1>여름방학 특강 신청</h1>
+    <form>
+        <fieldset>
+            <legend>수강 신청인</legend>
+            <ul>
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" autofocus placeholder="이름을 입력하세요" required>
+                </li>
+                <li>
+                    <label for="id">학번</label>
+                    <input type="text" id="id" name="id" placeholder="학번을 입력하세요" required>
+                </li>
+                <li>
+                    <label for="class">학과</label>
+                    <select id="class" name="class">
+                        <option value="archi">건축공학과</option>
+                        <option value="mechanic">기계공학과</option>
+                        <option value="indust">산업공학과</option>
+                        <option value="elec">전기전자공학과</option>
+                        <option value="computer" selected>컴퓨터공학과</option>
+                        <option value="chemical">화학공학과</option>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+        
+        <fieldset>
+            <legend>수강 과목을 선택하세요</legend>
+            <ul>
+                <li>
+                    <label><input type="radio" name="subject" value="html">HTML</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="subject" value="css">CSS</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="subject" value="javascript">JavaScript</label>
+                </li>
+            </ul>
+        </fieldset>
+        
+        <fieldset>
+            <legend>메일링 수신 여부</legend>
+            <p>해당되는 사항을 모두 선택하세요</p>
+            <label><input type="checkbox" name="mailing1" value="news">수업 소식</label>
+            <label><input type="checkbox" name="mailing2" value="homework">과제 제출 확인</label>
+            <label><input type="checkbox" name="mailing3" value="test">시험 정보</label>
+        </fieldset>
+        
+        <div>
+            <input type="submit" value="신청하기">
+            <input type="reset" value="다시 쓰기">
+        </div>
+    </form>
+</body>
+</html>

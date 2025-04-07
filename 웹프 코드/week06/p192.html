@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6주차 - 캐스케이딩 스타일 시트</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+        }
+        
+        h1 {
+            color: black;
+            text-align: center;
+        }
+        
+        h1 {
+            color: blue;
+        }
+        
+        p {
+            color: black;
+            font-size: 16px;
+        }
+        
+        /* 클래스 선택자 */
+        .red {
+            color: red !important;
+        }
+        
+        /* ID 선택자 */
+        #container {
+            width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        /* 인라인 스타일이 클래스 선택자보다 우선 적용됨 */
+        /* !important가 있으면 인라인 스타일보다 우선 적용됨 */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>캐스케이딩 스타일 시트</h1>
+        
+        <h2>스타일 우선순위</h2>
+        <p>캐스케이딩(Cascading)은 '위에서 아래로 흐른다'는 뜻으로, 스타일이 계단식으로 적용된다는 의미입니다.</p>
+        
+        <h3>우선순위 결정 방법</h3>
+        <ol>
+            <li>얼마나 중요한가에 따라
+                <ul>
+                    <li>사용자 스타일 > 제작자 스타일 > 브라우저 스타일</li>
+                    <li>!important가 붙은 스타일이 가장 우선</li>
+                </ul>
+            </li>
+            <li>얼마나 한정지을 수 있는가에 따라
+                <ul>
+                    <li>인라인 스타일 > id 스타일 > 클래스 스타일 > 타입 스타일</li>
+                </ul>
+            </li>
+            <li>소스 순서에 따라
+                <ul>
+                    <li>나중에 온 스타일이 먼저 온 스타일을 덮어씀</li>
+                </ul>
+            </li>
+        </ol>
+        
+        <h3>스타일 우선순위 예제</h3>
+        <p style="color: green;">이 텍스트는 인라인 스타일로 색상이 지정되어 있습니다. (green)</p>
+        <p class="red" style="color: green;">이 텍스트는 인라인 스타일과 클래스 스타일이 충돌하지만, !important가 있어 클래스 스타일이 우선 적용됩니다. (red)</p>
+        
+        <h2>스타일 상속</h2>
+        <p>자식 요소에서 별도로 스타일을 지정하지 않으면 부모 요소에 있는 스타일 속성들이 자식 요소로 전달됩니다.</p>
+        <div style="color: blue; border: 1px solid #ccc; padding: 10px;">
+            <p>이 텍스트는 부모 요소의 색상 스타일을 상속받습니다. (blue)</p>
+            <p style="color: purple;">이 텍스트는 자체 색상 스타일이 있어 부모 요소의 스타일을 상속받지 않습니다. (purple)</p>
+        </div>
+    </div>
+</body>
+</html>

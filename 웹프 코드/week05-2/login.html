@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5주차(2) - 로그인 양식</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        label {
+            display: inline-block;
+            width: 80px;
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>로그인</legend>
+            <label>아이디: <input type="text" id="user_id" size="10" autofocus placeholder="아이디 입력"></label>
+            <label>비밀번호: <input type="password" id="user_pw" size="10" placeholder="비밀번호 입력"></label>
+            <input type="image" src="images/login.png" alt="로그인">
+        </fieldset>
+    </form>
+</body>
+</html>

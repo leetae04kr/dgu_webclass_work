@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8주차 - 레이아웃</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움, 굴림;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        /* 디스플레이 속성 예제 */
+        .display-container {
+            margin: 20px 0;
+        }
+        
+        .inline { display: inline; background-color: #ffd9d9; padding: 10px; }
+        .block { display: block; background-color: #d9e5ff; padding: 10px; margin: 10px 0; }
+        .inline-block { display: inline-block; background-color: #d9ffd9; padding: 10px; margin: 10px; }
+        .none { display: none; }
+        
+        /* 가시성 속성 예제 */
+        .visibility-container {
+            margin: 20px 0;
+        }
+        
+        .visible { visibility: visible; background-color: #ffd9d9; padding: 10px; margin: 10px 0; }
+        .hidden { visibility: hidden; background-color: #d9e5ff; padding: 10px; margin: 10px 0; }
+        
+        /* 플로트 속성 예제 */
+        .float-container {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: hidden; /* 플로트 해제 */
+        }
+        
+        .float-left {
+            float: left;
+            width: 150px;
+            height: 100px;
+            background-color: #ffd9d9;
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        .float-right {
+            float: right;
+            width: 150px;
+            height: 100px;
+            background-color: #d9e5ff;
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        .clear { clear: both; }
+        
+        /* 포지션 속성 예제 */
+        .position-container {
+            position: relative;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            padding: 10px;
+        }
+        
+        .static {
+            position: static;
+            background-color: #ffd9d9;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: #d9e5ff;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        .absolute {
+            position: absolute;
+            top: 50px;
+            right: 30px;
+            background-color: #d9ffd9;
+            padding: 10px;
+        }
+        
+        .fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffd9ff;
+            padding: 10px;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>CSS 레이아웃</h1>
+        
+        <h2>디스플레이(display) 속성</h2>
+        <p>요소가 화면에 어떻게 표시될지를 결정하는 속성입니다.</p>
+        
+        <div class="display-container">
+            <span class="inline">display: inline</span>
+            <span class="inline">인라인 요소는 줄바꿈 없이 한 줄에 표시됩니다.</span>
+            
+            <div class="block">display: block</div>
+            <div class="block">블록 요소는 항상 새로운 줄에서 시작하며, 가로 영역을 모두 차지합니다.</div>
+            
+            <div class="inline-block">display: inline-block</div>
+            <div class="inline-block">인라인-블록 요소는 인라인처럼 한 줄에 표시되지만, 블록처럼 크기를 지정할 수 있습니다.</div>
+            
+            <div class="none">display: none (이 요소는 보이지 않습니다)</div>
+        </div>
+        
+        <h2>가시성(visibility) 속성</h2>
+        <p>요소를 보이게 하거나 보이지 않게 하는 속성입니다.</p>
+        
+        <div class="visibility-container">
+            <div class="visible">visibility: visible (이 요소는 보입니다)</div>
+            <div class="hidden">visibility: hidden (이 요소는 보이지 않지만 공간은 차지합니다)</div>
+        </div>
+        
+        <h2>플로트(float) 속성</h2>
+        <p>요소를 왼쪽이나 오른쪽으로 배치하는 속성입니다.</p>
+        
+        <div class="float-container">
+            <div class="float-left">float: left</div>
+            <div class="float-right">float: right</div>
+            <p>플로트 속성을 사용하면 요소를 왼쪽이나 오른쪽으로 배치할 수 있습니다. 텍스트는 플로트 요소 주위를 감싸게 됩니다.</p>
+            <div class="clear"></div>
+            <p>clear 속성을 사용하면 플로트 요소 아래에 다른 요소를 배치할 수 있습니다.</p>
+        </div>
+        
+        <h2>포지션(position) 속성</h2>
+        <p>요소의 위치를 지정하는 속성입니다.</p>
+        
+        <div class="position-container">
+            <div class="static">position: static (기본값)</div>
+            <div class="relative">position: relative (상대 위치)</div>
+            <div class="absolute">position: absolute (절대 위치)</div>
+        </div>
+        
+        <div class="fixed">position: fixed (고정 위치)</div>
+    </div>
+</body>
+</html>

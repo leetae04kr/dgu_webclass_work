@@ -1,0 +1,53 @@
+/* basic.css */
+body {
+    font-family: "맑은 고딕", 돋움, 굴림;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    color: #666;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* 색상 이름 표기법 */
+.red { color: red; }
+.blue { color: blue; }
+.green { color: green; }
+
+/* 16진수 표기법 */
+.hex-red { color: #ff0000; }
+.hex-blue { color: #0000ff; }
+.hex-green { color: #00ff00; }
+
+/* RGB 표기법 */
+.rgb-red { color: rgb(255, 0, 0); }
+.rgb-blue { color: rgb(0, 0, 255); }
+.rgb-green { color: rgb(0, 255, 0); }
+
+/* RGBA 표기법 */
+.box {
+    background-color: #000;
+    padding: 10px;
+}
+.rgba-red { color: rgba(255, 0, 0, 0.5); }
+.rgba-blue { color: rgba(0, 0, 255, 0.5); }
+.rgba-green { color: rgba(0, 255, 0, 0.5); }
+
+/* HSL 표기법 */
+.hsl-red { color: hsl(0, 100%, 50%); }
+.hsl-blue { color: hsl(240, 100%, 50%); }
+.hsl-green { color: hsl(120, 100%, 50%); }
