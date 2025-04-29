@@ -5,11 +5,17 @@
   <title>CSS display 속성</title>
   <style>
     /* Do it! li 요소를 가로로 나란히 배치하기 */
+    *{
+      box-sizing: border-box;
+    }
     nav > ul {
       list-style:none;      
     }
-    a {
-      text-decoration: none;
+    nav > ul > li {
+      display: inline-block;
+      padding: 20px;
+      margin: 0 20px;
+      border: 1px solid #222;
     }
   </style>
 </head>

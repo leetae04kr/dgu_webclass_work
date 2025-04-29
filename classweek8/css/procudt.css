@@ -6,7 +6,7 @@ body {
   /* id가 container인 요소 */
   #container {
     width: 600px;
-    margin: 20px auto;
+    margin: 20px auto 20px auto ;
     padding: 20px;
     background-color: #fff;
   }
