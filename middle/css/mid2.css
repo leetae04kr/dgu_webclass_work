@@ -1,0 +1,150 @@
+body {
+  font-family: 'arial', sans-serif;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px ;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+label {
+  color: #333;
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  text-align: center;
+  color: #666;
+}
+
+button {
+  background-color: hotpink;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+button:active {
+  background-color: #3e8e41;
+}
+button:focus {
+  outline: none;
+}
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+button:disabled:hover {
+  background-color: #ccc;
+}
+button:disabled:active {
+  background-color: #ccc;
+}
+button:disabled:focus {
+  outline: none;
+}
+button:disabled:focus-visible {
+  outline: none;
+}
+button:focus-visible {
+  outline: 2px solid #4CAF50;
+  outline-offset: 2px;
+}
+button:focus-visible:active {
+  outline: 2px solid #4CAF50;
+  outline-offset: 2px;
+}
+button:focus-visible:hover {
+  outline: 2px solid #4CAF50;
+  outline-offset: 2px;
+}
+button:focus-visible:disabled {
+  outline: none;
+}
+button:focus-visible:disabled:hover {
+  outline: none;
+}
+button:focus-visible:disabled:active {
+  outline: none;
+}
+button:focus-visible:disabled:focus {
+  outline: none;
+}
+button:focus-visible:disabled:focus-visible {
+  outline: none;
+}
+button:focus-visible:disabled:focus-visible {
+  outline: none;
+}
+button:focus-visible:disabled:focus-visible:active {
+  outline: none;
+}
+button:focus-visible:disabled:focus-visible:hover {
+  outline: none;
+}
+button:focus-visible:disabled:focus-visible:active {
+  outline: none;
+} 
+
+button:focus-visible:disabled:focus-visible:hover {
+  outline: none;
+}
+button:focus-visible:disabled:focus-visible:active {
+  outline: none;
+}
