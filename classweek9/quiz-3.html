@@ -7,6 +7,13 @@
 	<style>
 		body {
 			background-color: #02233b;
+			background-image: url('images/bg1.jpg');
+			background-repeat: repeat-x;
+			background-position: left bottom;
+			background-attachment: fixed;
+			background-size: cover;
+			
+			transition: background-color 0.5s ease; /* Added transition for background color */
 		}
 
 		#container {
@@ -16,6 +23,10 @@
 			border: 1px dotted gray;
 			padding: 20px;
 			background: #fff url('images/mic.png') no-repeat right bottom;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added box shadow for depth */
+			border-radius: 10px; /* Rounded corners */
+			opacity: 0.9; /* Slightly transparent */
+			transition: all 0.3s ease; /* Smooth transition for hover effect */
 		}
 
 		img {
@@ -27,6 +38,7 @@
 			color: white;
 			text-align: center;
 			padding: 20px;
+
 		}
 
 		h2 {
@@ -37,6 +49,16 @@
 
 		h3 {
 			color: #cf3b00;
+			font-size: 20px;
+			margin: 20px 0;
+			text-align: center;
+			font-weight: bold;
+			text-decoration: underline;
+			text-decoration-color: #cf3b00;
+			text-decoration-thickness: 2px;
+			text-decoration-style: dashed;
+			text-decoration-skip-ink: auto;
+			text-decoration-skip: objects;		
 		}
 
 		ul {
@@ -55,7 +77,11 @@
 		<h1>대학언론사 수습기자 모집</h1>
 		<h2>신입생 여러분을 기다립니다</h2>
 		<h3>모집분야</h3>
+		
 		<ul>
+			<li>신문기자(0명) : 학내 소식 및 기획기사 작성</li>
+			<li>사진기자(0명) : 학내 소식 및 기획기사 사진 촬영</li>
+			<li>편집기자(0명) : 신문 편집 및 디자인</li>
 			<li>아나운서(0명) : 학내 소식을 라디오 방송으로 보도</li>
 			<li>오프닝쇼프로듀서(0명) : 라디오 방송 기획, 제작</li>
 			<li>엔지니어(0명) : 라디오 방송 녹음 및 편집 </li>
