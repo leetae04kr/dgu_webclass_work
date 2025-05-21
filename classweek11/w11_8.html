@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Switch 문 예제</title>
+</head>
+
+<body>
+  <script>
+
+    let score2 = Number(prompt("점수를 입력하세요:"));
+    let grade = '';
+    switch (true) {
+      case (score2 >= 90 && score2 <= 100):
+        grade = 'A';
+        break;
+      case (score2 >= 80):
+        grade = 'B';
+        break;
+      case (score2 >= 70):
+        grade = 'C';
+        break;
+      case (score2 >= 60):
+        grade = 'D';
+        break;
+      default:
+        grade = 'F';
+    }
+    alert("등급: " + grade);
+
+  </script>
+</body>
+
+</html>

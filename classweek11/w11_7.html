@@ -1,60 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Switch 문 예제</title>
 </head>
+
 <body>
   <script>
-    let problem = prompt("문제 번호를 입력하세요 (1, 2, 3):");
 
-    switch (problem) {
-      case '1':
-        let score1 = Number(prompt("점수를 입력하세요:"));
-        switch (true) {
-          case (score1 >= 80):
-            alert("합격");
-            break;
-          default:
-            alert("불합격");
-        }
+    let score1 = Number(prompt("점수를 입력하세요:"));
+    switch (true) {
+      case (score1 >= 80):
+        alert("합격");
         break;
-
-      case '2':
-        let score2 = Number(prompt("점수를 입력하세요:"));
-        let grade = '';
-        switch (true) {
-          case (score2 >= 90 && score2 <= 100):
-            grade = 'A';
-            break;
-          case (score2 >= 80):
-            grade = 'B';
-            break;
-          case (score2 >= 70):
-            grade = 'C';
-            break;
-          case (score2 >= 60):
-            grade = 'D';
-            break;
-          default:
-            grade = 'F';
-        }
-        alert("등급: " + grade);
-        break;
-
-      case '3':
-        let name = prompt("이름을 입력하세요:");
-        switch (name) {
-          case '홍길동': // 원하는 이름으로 수정
-            alert("확인");
-            break;
-          default:
-            alert("다시 입력");
-        }
-        break;
-
       default:
-        alert("올바른 번호를 입력하세요.");
+        alert("불합격");
     }
+
+
   </script>
 </body>
+
 </html>
