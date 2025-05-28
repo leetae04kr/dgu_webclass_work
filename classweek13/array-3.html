@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array 객체의 메서드</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 1.2em;
+    }
+
+    hr {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+
+    <script>
+      let nums = [1, 2, 3];
+      let chars = ['a', 'b', 'c', 'd'];
+      let numsChars = nums.concat(chars);
+      let study = ['html', 'css', 'web', 'jquery'];
+
+      let string1 = nums.join();
+      document.write(`구분자없이: ${string1}<br>`);
+      let string2 = chars.join('/');
+      document.write(`/ 구분자지정: ${string2}`);
+      document.write(`<hr>`);
+    </script>
+  </div>
+</body>
+
+</html>

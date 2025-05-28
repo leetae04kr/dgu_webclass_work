@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Array 객체의 메서드</title>
+</head>
+
+<body>
+	<p>slice 메서드 사용하기</p>
+
+	<script>
+		let nums = [1, 2, 3];
+		let chars = ['a', 'b', 'c', 'd'];
+
+		let ret1 = nums.push(4, 5); // 배열끝에추가
+		document.write(`length : ${ret1} | 배열: ${nums}<br>`);
+		let ret2 = nums.unshift(0); // 배열앞에추가
+		document.write(`length : ${ret2}, | 배열: ${nums}`);
+		document.write(`<hr>`);
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Window 객체</title>
+</head>
+
+<body>
+	<p>문서를 열면 팝업 창이 표시됩니다</p>
+
+	<body onload="openPopup()">
+		<p>문서를열면팝업창이표시됩니다</p>
+		<script>
+			let blocked = false;
+			function openPopup() {
+				let newWin = window.open(‘notice.html’, ‘pop’, ‘width = 500, height = 400’);
+				if (newWin == null) {
+					alert("팝업이차단되어있습니다. 팝업차단을해제해주세요.")
+				}
+			}
+		</script>
+	</body>
+
+</body>
+
+</html>
