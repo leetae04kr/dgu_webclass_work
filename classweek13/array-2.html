@@ -19,6 +19,76 @@
 		hr {
 			width: 100%;
 		}
+		.container {
+			width: 80%;
+			max-width: 800px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		p {
+			margin: 10px 0;
+		}
+		.container p {
+			font-size: 1.2em;
+			color: #333;
+		}
+		.container h1 {
+			font-size: 2em;
+			margin-bottom: 20px;
+			color: #007BFF;
+		}
+		.container script {
+			font-size: 1em;
+			color: #555;
+		}
+		.container script:hover {
+			color: #007BFF;
+		}
+		.container hr {
+			border: 1px solid #007BFF;
+			margin: 20px 0;
+		}
+		.container .result {
+			font-weight: bold;
+			color: #28a745;
+		}
+		.container .result:hover {
+			color: #155724;
+		}
+		.container .error {
+			color: #dc3545;
+			font-weight: bold;
+		}
+		.container .error:hover {
+			color: #c82333;
+		}
+		.container .info {
+			color: #17a2b8;
+			font-style: italic;
+		}
+		.container .info:hover {
+			color: #138496;
+		}
+		.container .warning {
+			color: #ffc107;
+			font-weight: bold;
+		}
+		.container .warning:hover {
+			color: #e0a800;
+		}
+		.container .success {
+			color: #28a745;
+			font-weight: bold;
+		}
+		.container .success:hover {
+			color: #218838;
+		}
+		.container .highlight {
+			background-color: #f8f9fa;
+			padding: 10px;
+			border-radius: 5px;
+			margin: 10px 0;
+		}
 	</style>
 </head>
 
@@ -29,10 +99,11 @@
 			let chars = ['a', 'b', 'c', 'd'];
 			let numsChars = nums.concat(chars);
 			let charsNums = chars.concat(nums);
-			document.write(`nums에chars 합치면: ${numsChars}, <br>
-chars에nums 합치면 ${charsNums}`);
+			document.write(`nums에chars 합치면: ${numsChars}, <br> chars에nums 합치면 ${charsNums}`);
 			document.write(`<hr>`);
+			
 		</script>
+
 	</div>
 </body>
 
