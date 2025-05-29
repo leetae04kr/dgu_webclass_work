@@ -32,26 +32,116 @@
       font-weight: bold;
       color: red;
     }
+    p {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+    p span {
+      color: #f00;
+      font-weight: bold;
+    }
+    p span.accent {
+      color: #f00;
+      font-weight: bold;
+    }
+    p span#result {
+      color: #f00;
+      font-weight: bold;
+      font-size: 2em;
+    }
+    p span#result::after {
+      content: "일";
+      font-size: 0.5em;
+      vertical-align: super;
+    }
+    p span#result::before {
+      content: "당신은 ";
+      font-size: 0.5em;
+      vertical-align: super;
+    }
+    p span#result::first-letter {
+      font-size: 1.5em;
+      color: #f00;
+    }
+    p span#result::last-letter {
+      font-size: 1.5em;
+      color: #f00;
+    }
+    p span#result::first-line {
+      font-size: 1.5em;
+      color: #f00;
+    }
+    p span#result::last-line {
+      font-size: 1.5em;
+      color: #f00;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1>책 읽기</h1>
-    <p><span class="accent" id="result"></span>일 연속으로 <br> 책 읽기를 달성했군요.</p>
-    <p>축하합니다!</p>
+    <h1>인생살기</h1>
+    <p><span class="accent" id="result"></span> <br> 인생을 살아오셨군요.</p>
+    <p>많이 사셨네요 참!</p>
   </div>
 
-  <script>
+  <!-- <script>
     let now = new Date;
     // 오늘 날짜를 객체로 지정
-    let firstDay = new Date("2024-01-01"); // 시작 날짜를 객체로 지정
-    let toNow = now - getTime;
-    let toFirst = firstDay - getTime();
+    let firstDay = new Date("2004-12-28"); // 시작 날짜를 객체로 지정
+    let toNow = now.getTime();
+    // 오늘 날짜의 밀리 초를 가져옴
+    let toFirst = firstDay.getTime();
     let passedTime = toNow - toFirst; // 첫날부터 오늘까지 지난 시간(밀리 초)
     passedTime = Math.round(passedTime / (1000 * 60 * 60 * 24)); // 밀리 초를 일 수로 계산하고 반올림
     document.querySelector('#result').innerText = passedTime;
-  </script>
+
+
+  </script> -->
+
+    <div class="container">
+      <h1>인생살기</h1>
+      <p>
+        <span class="accent" id="result"></span> <br>
+        <span id="yearMonth"></span>
+        인생을 살아오셨군요.
+      </p>
+      <p>ㅇㅁㄴ라ㅣㅁㄴㅇ;리ㅏㅓ!</p>
+    </div>
+  
+    <script>
+      let now = new Date();
+      let firstDay = new Date("2004-12-28");
+      let toNow = now.getTime();
+      let toFirst = firstDay.getTime();
+      let passedTime = toNow - toFirst;
+      passedTime = Math.round(passedTime / (1000 * 60 * 60 * 24));
+      document.querySelector('#result').innerText = passedTime;
+  
+      // 연도와 달 계산
+      let years = now.getFullYear() - firstDay.getFullYear();
+      let months = now.getMonth() - firstDay.getMonth();
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+      // 일 계산 (옵션)
+      let days = now.getDate() - firstDay.getDate();
+      if (days < 0) {
+        months--;
+        // 이전 달의 마지막 날짜를 구해서 더함
+        let prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += prevMonth.getDate();
+        if (months < 0) {
+          years--;
+          months += 12;
+        }
+      }
+  
+      document.querySelector('#yearMonth').innerText =
+        `(${years}년 ${months}개월 ${days}일) `;
+    </script>
+
 
 </body>
 
