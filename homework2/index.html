@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화려한 자기소개 페이지</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 폰트어썸 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 구글 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- 애니메이션 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS 라이브러리 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 로딩 화면 -->
+    <div class="loading-screen">
+        <div class="loading-animation">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <h2 class="loading-text">태영이의 포트폴리오에 진입합니다 ... </h2>
+    </div>
+
+    <!-- 파티클 배경 -->
+    <div id="particles-js"></div>
+
+    <!-- 커서 효과 -->
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- 네비게이션 -->
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <span class="glitch-text" data-text="PORTFOLIO">PORTFOLIO</span>
+        </div>
+        <div class="nav-toggle">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> 
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link">홈</a>
+            <a href="#about" class="nav-link">소개</a>
+            <a href="#skills" class="nav-link">기술</a>
+            <a href="#projects" class="nav-link">프로젝트</a>
+            <a href="#contact" class="nav-link">연락처</a>
+        </div>
+    </nav>
+
+    <!-- 메인 섹션 -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="animate-text">안녕하세요,</span>
+                <span class="animate-text">저는</span>
+                <span class="animate-text highlight">이태영</span>
+                <span class="animate-text">입니다</span>
+            </h1>
+            <div class="hero-subtitle">
+                <span class="typing-text"></span><span class="typing-cursor">|</span>
+            </div>
+            <div class="hero-cta">
+                <button class="btn-primary">자세히 보기</button>
+                <button class="btn-secondary">연락하기</button>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div>
+                <span class="scroll-arrows">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 소개 섹션 -->
+    <section id="about" class="about-section">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">소개</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-image-container" data-aos="fade-right">
+                <div class="about-image-wrapper">
+                    <div class="about-image-glitch">
+                        <div class="glitch-img" style="background-image: url('https://picsum.photos/500/500');"></div>
+                        <div class="glitch-img" style="background-image: url('https://picsum.photos/500/500');"></div>
+                        <div class="glitch-img" style="background-image: url('https://picsum.photos/500/500');"></div>
+                        <div class="glitch-img" style="background-image: url('https://picsum.photos/500/500');"></div>
+                        <div class="glitch-img" style="background-image: url('https://picsum.photos/500/500');"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text" data-aos="fade-left">
+                <h3 class="about-subtitle">저는 누구인가요?</h3>
+                <p class="about-description">
+                    창의적인 문제 해결사이자 열정적인 개발자로서, 저는 항상 새로운 도전을 추구할까요? 
+                    복잡한 문제를 해결하고 혁신적인 솔루션을 만드는 것에 큰 즐거움을 느낍니다.
+                    사용자 경험을 최우선으로 생각하며, 아름답고 직관적인 인터페이스를 구축하는 데 전념하고 있습니다.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="stat-number counter" data-target="5">0</div>
+                        <div class="stat-label">경력 연수</div>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="stat-number counter" data-target="50">0</div>
+                        <div class="stat-label">완료 프로젝트</div>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="stat-number counter" data-target="15">0</div>
+                        <div class="stat-label">수상 경력</div>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="stat-number counter" data-target="99">0</div>
+                        <div class="stat-label">만족 고객</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 기술 섹션 -->
+    <section id="skills" class="skills-section">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">기술</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="skills-content">
+            <div class="skills-text" data-aos="fade-right">
+                <h3 class="skills-subtitle">제 전문 분야</h3>
+                <p class="skills-description">
+                    다양한 기술 스택을 활용하여 복잡한 문제를 해결하고 혁신적인 솔루션을 개발합니다.
+                    최신 트렌드를 항상 주시하며 지속적으로 학습하고 성장하는 것을 중요시합니다.
+                </p>
+            </div>
+            <div class="skills-chart" data-aos="fade-left">
+                <div class="skill-container">
+                    <div class="skill-name">Python</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="95"></div>
+                    </div>
+                    <div class="skill-percentage">95%</div>
+                </div>
+                <div class="skill-container">
+                    <div class="skill-name">HTML/CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                    <div class="skill-percentage">90%</div>
+                </div>
+                <div class="skill-container">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                    <div class="skill-percentage">85%</div>
+                </div>
+                <div class="skill-container">
+                    <div class="skill-name">React</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                    <div class="skill-percentage">80%</div>
+                </div>
+                <div class="skill-container">
+                    <div class="skill-name">Node.js</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
+                    <div class="skill-percentage">75%</div>
+                </div>
+            </div>
+        </div>
+        <div class="skills-icons">
+            <div class="icon-container" data-aos="flip-left" data-aos-delay="100">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+            </div>
+            <div class="icon-container" data-aos="flip-left" data-aos-delay="200">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+            </div>
+            <div class="icon-container" data-aos="flip-left" data-aos-delay="300">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="icon-container" data-aos="flip-left" data-aos-delay="400">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+            </div>
+            <div class="icon-container" data-aos="flip-left" data-aos-delay="500">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+            </div>
+            <div class="icon-container" data-aos="flip-left" data-aos-delay="600">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로젝트 섹션 -->
+    <section id="projects" class="projects-section">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">프로젝트</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="projects-filter" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">전체</button>
+            <button class="filter-btn" data-filter="web">웹</button>
+            <button class="filter-btn" data-filter="mobile">모바일</button>
+            <button class="filter-btn" data-filter="design">디자인</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-category="web" data-aos="zoom-in" data-aos-delay="100">
+                <div class="project-image">
+                    <img src="https://picsum.photos/600/400?random=1" alt="프로젝트 1">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">웹 포트폴리오</h3>
+                    <p class="project-description">반응형 웹 디자인과 모던 애니메이션을 활용한 포트폴리오 사이트</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="mobile" data-aos="zoom-in" data-aos-delay="200">
+                <div class="project-image">
+                    <img src="https://picsum.photos/600/400?random=2" alt="프로젝트 2">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">모바일 앱</h3>
+                    <p class="project-description">사용자 친화적인 인터페이스와 실시간 데이터 처리 기능을 갖춘 모바일 앱</p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">Firebase</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="design" data-aos="zoom-in" data-aos-delay="300">
+                <div class="project-image">
+                    <img src="https://picsum.photos/600/400?random=3" alt="프로젝트 3">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">UI/UX 디자인</h3>
+                    <p class="project-description">사용자 경험을 최우선으로 고려한 직관적인 인터페이스 디자인</p>
+                    <div class="project-tags">
+                        <span class="tag">Figma</span>
+                        <span class="tag">Adobe XD</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="web" data-aos="zoom-in" data-aos-delay="400">
+                <div class="project-image">
+                    <img src="https://picsum.photos/600/400?random=4" alt="프로젝트 4">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">E-커머스 플랫폼</h3>
+                    <p class="project-description">안전한 결제 시스템과 사용자 맞춤형 추천 기능을 갖춘 온라인 쇼핑몰</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D 큐브 섹션 -->
+    <section class="cube-section">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">3D 쇼케이스</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="cube-container" data-aos="zoom-in">
+            <div class="cube">
+                <div class="cube-face front">프론트엔드</div>
+                <div class="cube-face back">백엔드</div>
+                <div class="cube-face right">디자인</div>
+                <div class="cube-face left">개발</div>
+                <div class="cube-face top">기획</div>
+                <div class="cube-face bottom">분석</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 연락처 섹션 -->
+    <section id="contact" class="contact-section">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">연락처</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info" data-aos="fade-right">
+                <h3 class="contact-subtitle">연락 방법</h3>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>대구광역시 달서구 야외음악당로 39길 54</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+82 10-8271-0000</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>gilbert0001@dongguk.ac.kr</span>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-form-container" data-aos="fade-left">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="이름" required>
+                        <span class="input-highlight"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="이메일" required>
+                        <span class="input-highlight"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="제목" required>
+                        <span class="input-highlight"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input" placeholder="메시지" required></textarea>
+                        <span class="input-highlight"></span>
+                    </div>
+                    <button type="submit" class="btn-submit">메시지 보내기</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="glitch-text" data-text="PORTFOLIO">PORTFOLIO</span>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2024215372 이태영. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 스크롤 상단 버튼 -->
+    <button class="scroll-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 스크립트 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
